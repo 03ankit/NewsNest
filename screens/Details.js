@@ -9,7 +9,7 @@ export default function DetailsScreen({ route ,navigation }) {
   return (
     <View style={styles.container}>
       <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
-                  <Text style={{color:"white", fontSize:20 }}>←</Text>
+                  <Text style={{color:"white", fontSize:20, alignContent:"center",textAlign:"center" }}>←</Text>
       </TouchableOpacity>
       <ScrollView showsVerticalScrollIndicator={false}>
         <Image source={{ uri: item.urlToImage }} style={styles.image}/>
@@ -50,8 +50,9 @@ const styles = StyleSheet.create({
     borderColor:"white",
     marginLeft:hp("2.5%"),
     marginTop:hp("5%"),
-    borderRadius:hp("3%"),
+    borderRadius:hp("2.5%"),
     alignItems:"center",
+    justifyContent:"center",
 
   },
 });
