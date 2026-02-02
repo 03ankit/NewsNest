@@ -19,10 +19,10 @@ export default function AppNavigator() {
           <Stack.Navigator screenOptions={{ headerShown: false }}>
             
             {/* <Stack.Screen name="Login" component={LoginScreen} />*/}
-            {/* <Stack.Screen name="Splashscreen" component={SplashScreen} />
+            <Stack.Screen name="Splashscreen" component={SplashScreen} />
             <Stack.Screen name="PhoneNumberScreen" component={PhoneNumberScreen} />
             <Stack.Screen name="Otpscreen" component={Otpscreen} />  
-            <Stack.Screen name="Profile" component={Profile} /> */}
+            <Stack.Screen name="Profile" component={Profile} />
             {/* <Stack.Screen name="Register" component={RegisterScreen} /> */}
             
             <Stack.Screen name="Bottomtab"component={Bottomtab}/>
