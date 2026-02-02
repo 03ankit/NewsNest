@@ -19,10 +19,7 @@ export default function Profile({ navigation }) {
     loadUser();
   }, []);
   
-  const isValidEmail = (email) => {
-  const regex = /^[a-z0-9.]+@[a-z]+\.[a-z]{2,}$/;
-  return regex.test(email);
-};
+  
 
 
 
@@ -45,11 +42,6 @@ export default function Profile({ navigation }) {
       setMobile(user.mobile || "");
       //setPhone(user.mobile || "");
       setIsProfileCompleted(user.isProfileCompleted || false);
-       if (!isValidEmail(email)) {
-        Alert.alert("Error", "Please enter a valid email");
-         return;
-        }
-
       if (user.isProfileCompleted) {
         setName(user.name);
         setEmail(user.email);
@@ -62,6 +54,12 @@ export default function Profile({ navigation }) {
   const saveUser = async () => {
     if (!name || !email || !address) {
       Alert.alert("Error", "Please fill all fields");
+      return;
+    }
+
+    
+    if (!isValidEmail(email)) {
+      Alert.alert("Error", "Please enter a valid email");
       return;
     }
 
